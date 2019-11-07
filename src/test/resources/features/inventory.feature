@@ -1,14 +1,23 @@
 Feature: The Gilded Rose has inventory
+
+  Scenario: I can see the inventory page
+    Given There is an inventory page
+    When  I load the page
+    Then  I can see the welcome message
+
+  @development
   Scenario: All Items have a SellIn date that shows when the item should be sold by
     Given There are items in the catalog
     When  I look at the item summary
     Then  I see that all of the items have a sell by date
 
+  @development
   Scenario: All Items have values
       Given There are items in the catalog
       When  I look at the item summary
       Then I see that all the items have a value assigned to them
 
+  @development
   Scenario Outline: When a day passes items degrade
       Given There are items in the catalog
       When it's the day <days_passed>

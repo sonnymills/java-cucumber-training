@@ -7,6 +7,26 @@ import cucumber.api.java.en.When;
 import static org.junit.Assert.*;
 
 public class Stepdefs {
+
+    @Given("There is an inventory page")
+    public void there_is_an_inventory_page() {
+        // Write code here that turns the phrase above into concrete actions
+
+    }
+
+    @When("I load the page")
+    public void i_load_the_page() {
+        // Write code here that turns the phrase above into concrete actions
+    }
+
+    @Then("I can see the welcome message")
+    public void i_can_see_the_welcome_message() {
+        // Write code here that turns the phrase above into concrete actions
+    }
+
+
+
+
     @Given("There are items in the catalog")
     public void there_are_items_in_the_catalog() {
         // Write code here that turns the phrase above into concrete actions
