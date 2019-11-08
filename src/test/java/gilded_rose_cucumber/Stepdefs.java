@@ -24,7 +24,7 @@ public class Stepdefs {
 
     @Then("I can see the welcome message")
     public void i_can_see_the_welcome_message() {
-        assertTrue(driver.getBodyText().contains("Kahjiit"));
+       driver.pageShouldContain("Kahjiit");
     }
 
 /*

@@ -6,6 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.phantomjs.PhantomJSDriver;
 import org.openqa.selenium.phantomjs.PhantomJSDriverService;
+//import org.openqa.selenium.interactions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
@@ -36,11 +37,11 @@ public class WebDriverWrapper {
     public WebDriverWrapper() {
         if (System.getProperty("webdriver").equals("chrome")) {
             ChromeOptions chromeOptions = new ChromeOptions();
-            //chromeOptions.addArguments("--headless");
-            //chromeOptions.addArguments("--disable-gpu");
-            //chromeOptions.addArguments("--no-sandbox");
-            //chromeOptions.addArguments("--silent");
-            //chromeOptions.addArguments("--start-maximized");
+            chromeOptions.addArguments("--headless");
+            chromeOptions.addArguments("--disable-gpu");
+            chromeOptions.addArguments("--no-sandbox");
+            chromeOptions.addArguments("--silent");
+            chromeOptions.addArguments("--start-maximized");
             driver = new ChromeDriver(chromeOptions);
         } else {
             DesiredCapabilities dcap = new DesiredCapabilities();
