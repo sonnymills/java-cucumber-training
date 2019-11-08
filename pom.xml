@@ -69,7 +69,6 @@
             <version>1.3.2</version>
         </dependency>
 
-
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
@@ -91,6 +90,16 @@
                 </configuration>
             </plugin>
             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <!--<version></version>-->
+                <configuration>
+                    <systemPropertyVariables>
+                        <webdriver.chrome.driver>/Users/admin/tools/homebrew/bin/chromedriver</webdriver.chrome.driver>
+                        <webdriver>chrome</webdriver>
+                    </systemPropertyVariables>
+                </configuration>
+            </plugin><plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>

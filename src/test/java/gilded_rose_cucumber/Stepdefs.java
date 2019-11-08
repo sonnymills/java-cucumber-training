@@ -3,14 +3,18 @@ package gilded_rose_cucumber;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import steps.driver.WebDriverWrapper;
+import steps.site.GildedRoseSite;
 
 import static org.junit.Assert.*;
 
 public class Stepdefs {
+    private final GildedRoseSite site = new GildedRoseSite();
+    private final WebDriverWrapper driver = new WebDriverWrapper();
 
     @Given("There is an inventory page")
     public void there_is_an_inventory_page() {
-        // Write code here that turns the phrase above into concrete actions
+        driver.visit("/inventory/list");
 
     }
 
@@ -24,6 +28,7 @@ public class Stepdefs {
         // Write code here that turns the phrase above into concrete actions
     }
 
+/*
 
 
 
@@ -58,4 +63,5 @@ public class Stepdefs {
     @Then("then <item> have appropriately decreased <sell_by> and <value>")
     public void thenItemHaveAppropriatelyDecreasedSell_byAndValue() {
     }
+*/
 }
