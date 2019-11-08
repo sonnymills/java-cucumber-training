@@ -3,6 +3,7 @@ package gilded_rose_cucumber;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import org.openqa.selenium.By;
 import steps.driver.WebDriverWrapper;
 import steps.site.GildedRoseSite;
 
@@ -18,13 +19,14 @@ public class Stepdefs {
     }
 
     @When("I load the page")
-    public void i_load_the_page() {
+    public void i_load_the_page() throws InterruptedException {
         site.visit("/inventory/list");
     }
 
     @Then("I can see the welcome message")
     public void i_can_see_the_welcome_message() {
-       driver.pageShouldContain("Kahjiit");
+       driver.pageShouldContain("inventory");
+
     }
 
 /*

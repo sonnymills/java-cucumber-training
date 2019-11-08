@@ -10,6 +10,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
 import org.springframework.test.context.ContextConfiguration;
 import steps.driver.WebDriverFactory;
+import steps.driver.WebDriverWrapper;
 
 /**
  * Class to use spring application context while running cucumber
@@ -29,6 +30,9 @@ public class SpringCucumberTest {
     }
     @After
     public void tearDown(){
+
+            WebDriverWrapper defaultDriver = WebDriverFactory.getDefaultDriver();
+            defaultDriver.takeScreenshot("tmp/oops");
         LOG.info("-------------- Trying to Close all Browsers--------------");
         WebDriverFactory.resetAll();
 
