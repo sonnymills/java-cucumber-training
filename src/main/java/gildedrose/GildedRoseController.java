@@ -11,6 +11,6 @@ public class GildedRoseController {
         }
     @RequestMapping("/inventory/list")
     public String inventory() {
-        return "<body><h2>this is the inventory page<h2></body>";
+        return "<body>this is the inventory page</body>";
     }
 }

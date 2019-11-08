@@ -1,15 +1,15 @@
-package gilded_rose_cucumber;
+package com.gildedrose.cucumber.stepdefs;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import org.openqa.selenium.By;
 import steps.driver.WebDriverWrapper;
 import steps.site.GildedRoseSite;
 
 import static org.junit.Assert.*;
 
-public class Stepdefs {
+
+public class StepDefs {
     private final GildedRoseSite site = new GildedRoseSite();
     private final WebDriverWrapper driver = new WebDriverWrapper();
 
@@ -25,7 +25,7 @@ public class Stepdefs {
 
     @Then("I can see the welcome message")
     public void i_can_see_the_welcome_message() {
-       driver.pageShouldContain("inventory");
+        driver.pageShouldContain("inventory");
 
     }
 

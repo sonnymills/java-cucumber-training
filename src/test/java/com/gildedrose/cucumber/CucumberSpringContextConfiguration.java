@@ -1,8 +1,9 @@
-package gilded_rose_cucumber;
+package com.gildedrose.cucumber;
 
+import cucumber.api.Scenario;
 import cucumber.api.java.After;
-import gildedrose.Application;
 import cucumber.api.java.Before;
+import gildedrose.Application;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.test.context.SpringBootContextLoader;
@@ -17,9 +18,9 @@ import steps.driver.WebDriverWrapper;
  */
 @SpringBootTest(webEnvironment = WebEnvironment.DEFINED_PORT)
 @ContextConfiguration(classes = Application.class, loader = SpringBootContextLoader.class)
-public class SpringCucumberTest {
+public class CucumberSpringContextConfiguration {
 
-    private static final Logger LOG = LoggerFactory.getLogger(SpringCucumberTest.class);
+    private static final Logger LOG = LoggerFactory.getLogger(Application.class);
 
     /**
      * Need this method so the cucumber will recognize this class as glue and load spring context configuration
@@ -29,10 +30,11 @@ public class SpringCucumberTest {
         LOG.info("-------------- Spring Context Initialized For Executing Cucumber Tests --------------");
     }
     @After
-    public void tearDown(){
-
+    public void tearDown(Scenario scenario){
+        if (scenario.isFailed()) {
             WebDriverWrapper defaultDriver = WebDriverFactory.getDefaultDriver();
-            defaultDriver.takeScreenshot("tmp/oops");
+            defaultDriver.takeScreenshot("tmp/oops" + scenario.getName());
+        }
         LOG.info("-------------- Trying to Close all Browsers--------------");
         WebDriverFactory.resetAll();
 
