@@ -14,18 +14,17 @@ public class Stepdefs {
 
     @Given("There is an inventory page")
     public void there_is_an_inventory_page() {
-        driver.visit("/inventory/list");
-
+        // don't need anything here because no data yet
     }
 
     @When("I load the page")
     public void i_load_the_page() {
-        // Write code here that turns the phrase above into concrete actions
+        site.visit("/inventory/list");
     }
 
     @Then("I can see the welcome message")
     public void i_can_see_the_welcome_message() {
-        // Write code here that turns the phrase above into concrete actions
+        assertTrue(driver.getBodyText().contains("Kahjiit"));
     }
 
 /*
