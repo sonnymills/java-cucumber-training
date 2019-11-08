@@ -28,6 +28,7 @@ public class CucumberSpringContextConfiguration {
     @Before
     public void setUp() {
         LOG.info("-------------- Spring Context Initialized For Executing Cucumber Tests --------------");
+
     }
     @After
     public void tearDown(Scenario scenario){

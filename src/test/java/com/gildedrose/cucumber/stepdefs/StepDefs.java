@@ -11,7 +11,7 @@ import static org.junit.Assert.*;
 
 public class StepDefs {
     private final GildedRoseSite site = new GildedRoseSite();
-    private final WebDriverWrapper driver = new WebDriverWrapper();
+    private final WebDriverWrapper driver = site.getDriver();
 
     @Given("There is an inventory page")
     public void there_is_an_inventory_page() {

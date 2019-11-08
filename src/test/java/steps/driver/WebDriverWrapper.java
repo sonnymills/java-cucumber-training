@@ -37,9 +37,9 @@ public class WebDriverWrapper {
     public WebDriverWrapper() {
         if (System.getProperty("webdriver").equals("chrome")) {
             ChromeOptions chromeOptions = new ChromeOptions();
-            //chromeOptions.addArguments("--headless");
+            chromeOptions.addArguments("--headless");
             chromeOptions.addArguments("--disable-gpu");
-            //chromeOptions.addArguments("--no-sandbox");
+            chromeOptions.addArguments("--no-sandbox");
             chromeOptions.addArguments("--silent");
             chromeOptions.addArguments("--start-maximized");
             driver = new ChromeDriver(chromeOptions);
