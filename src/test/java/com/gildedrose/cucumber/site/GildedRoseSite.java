@@ -1,10 +1,7 @@
-package steps.site;
+package com.gildedrose.cucumber.site;
 
-import org.junit.Assert;
-import steps.driver.WebDriverFactory;
-import steps.driver.WebDriverWrapper;
-
-import java.util.stream.Collectors;
+import com.gildedrose.cucumber.driver.WebDriverFactory;
+import com.gildedrose.cucumber.driver.WebDriverWrapper;
 
 public class GildedRoseSite {
     public final WebDriverWrapper driver = WebDriverFactory.getDefaultDriver();

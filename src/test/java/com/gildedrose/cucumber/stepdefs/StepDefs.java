@@ -3,10 +3,8 @@ package com.gildedrose.cucumber.stepdefs;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import steps.driver.WebDriverWrapper;
-import steps.site.GildedRoseSite;
-
-import static org.junit.Assert.*;
+import com.gildedrose.cucumber.driver.WebDriverWrapper;
+import com.gildedrose.cucumber.site.GildedRoseSite;
 
 
 public class StepDefs {

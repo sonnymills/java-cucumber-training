@@ -10,8 +10,8 @@ import org.springframework.boot.test.context.SpringBootContextLoader;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
 import org.springframework.test.context.ContextConfiguration;
-import steps.driver.WebDriverFactory;
-import steps.driver.WebDriverWrapper;
+import com.gildedrose.cucumber.driver.WebDriverFactory;
+import com.gildedrose.cucumber.driver.WebDriverWrapper;
 
 /**
  * Class to use spring application context while running cucumber

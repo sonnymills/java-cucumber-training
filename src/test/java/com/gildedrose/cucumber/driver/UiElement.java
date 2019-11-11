@@ -1,4 +1,4 @@
-package steps.driver;
+package com.gildedrose.cucumber.driver;
 
 public interface UiElement {
     void sendKeys(String keys);

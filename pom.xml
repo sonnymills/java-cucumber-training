@@ -108,7 +108,7 @@
                 <!--<version></version>-->
                 <configuration>
                     <systemPropertyVariables>
-                        <webdriver.chrome.driver>/Users/admin/tools/homebrew/bin/chromedriver</webdriver.chrome.driver>
+                        <webdriver.chrome.driver>/usr/local/bin/chromedriver</webdriver.chrome.driver>
                         <webdriver>chrome</webdriver>
                     </systemPropertyVariables>
                 </configuration>

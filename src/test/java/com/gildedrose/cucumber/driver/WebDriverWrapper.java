@@ -1,4 +1,4 @@
-package steps.driver;
+package com.gildedrose.cucumber.driver;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;

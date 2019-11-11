@@ -1,4 +1,4 @@
-package steps.driver;
+package com.gildedrose.cucumber.driver;
 
 import org.openqa.selenium.WebElement;
 
