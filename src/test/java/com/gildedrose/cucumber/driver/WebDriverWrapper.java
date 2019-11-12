@@ -36,6 +36,7 @@ public class WebDriverWrapper {
 
     public WebDriverWrapper() {
         if (System.getProperty("webdriver").equals("chrome")) {
+            java.util.logging.Logger.getLogger("org.openqa.selenium").setLevel(Level.OFF);
             ChromeOptions chromeOptions = new ChromeOptions();
             chromeOptions.addArguments("--headless");
             chromeOptions.addArguments("--disable-gpu");
@@ -43,7 +44,6 @@ public class WebDriverWrapper {
             chromeOptions.addArguments("--silent");
             chromeOptions.addArguments("--start-maximized");
             driver = new ChromeDriver(chromeOptions);
-            System.out.println("I AM A NEW DRIVER \n\n");
         } else {
             DesiredCapabilities dcap = new DesiredCapabilities();
             String[] phantomArgs = new String[]{
