@@ -13,6 +13,9 @@ public class Item {
         this.sellIn = sellIn;
         this.quality = quality;
     }
+    public String getName(){
+        return this.name;
+    }
 
    @Override
    public String toString() {

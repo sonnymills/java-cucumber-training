@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org" >
+<!--<html xmlns:th="https://www.thymeleaf.org" th:replace="~{fragments/layout :: layout (~{::body},'owners')}">-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>Inventory</title>
+</head>
+<body>
+<table id="owners" class="table table-striped">
+<!--    <thead>
+    <tr>
+        <th style="width: 150px;">Name</th>
+        <th style="width: 200px;">Address</th>
+    </tr>
+    </thead> -->
+    <tbody>
+    <tr th:each="item : ${items}">
+        <td>
+<!--            <a th:href="@{/owners/__${owner.id}__}" th:text="${owner.firstName + ' ' + owner.lastName}"/></a>-->
+        </td>
+        <td th:text="${item.name}"/>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
+
+

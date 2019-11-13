@@ -21,6 +21,11 @@ public class InventorySteps {
     public void i_look_at_the_item_summary() {
         site.visit("/inventory/list");
     }
+    @Then("I see the names of two items")
+    public void i_see_the_names_of_two_items() {
+        driver.pageShouldContain("thing1");
+        driver.pageShouldContain("thing2");
+    }
 
     @Then("I see that all of the items have a sell by date")
     public void i_see_that_all_of_the_items_have_a_sell_by_date() {
