@@ -1,7 +1,6 @@
 package com.gildedrose.cucumber.stepdefs;
 
 import com.gildedrose.GildedRose;
-import com.gildedrose.Inventory;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -14,9 +13,8 @@ public class InventorySteps {
 
     @Given("There are items in the catalog")
     public void there_are_items_in_the_catalog() {
-        Inventory.Item[] items = new Inventory.Item[] { new Inventory.Item("foo", 0, 0) };
-        GildedRose app = new GildedRose(items);
-        app.updateQuality();
+        //GildedRose app = new GildedRose(items);
+        // app.updateQuality();
     }
 
     @When("I look at the item summary")
