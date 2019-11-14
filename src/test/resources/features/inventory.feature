@@ -1,16 +1,16 @@
-#Feature: The Gilded Rose has inventory
-#
-#  Scenario: I can see the inventory page
-#    Given There is an inventory page
-#    When  I load the page
-#    Then  I can see the welcome message
-#
-#  @now
-#  Scenario: All Items have a SellIn date that shows when the item should be sold by
-#    Given There are items in the catalog
-#    When  I look at the item summary
-#    Then  I see the names of two items
-#
+Feature: The Gilded Rose has inventory
+
+  Scenario: I can see the inventory page
+    Given There is an inventory page
+    When  I load the page
+    Then  I can see the welcome message
+
+  @now
+  Scenario: All Items have a SellIn date that shows when the item should be sold by
+    Given There are items in the catalog
+    When  I look at the item summary
+    Then  I see the names of two items
+
 #  @development
 #  Scenario: All Items have values
 #      Given There are items in the catalog

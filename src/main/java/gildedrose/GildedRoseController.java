@@ -24,7 +24,7 @@ public class GildedRoseController {
         public String index() {
             return "<body>Welcome to The Gilded Rose!<br>I am Khajiit. Do you have coin?</body>";
         }
-    @GetMapping(value = "/inventory")
+    @GetMapping(value = "/inventory/list")
     public String inventory(Item item, BindingResult result, Map<String, Object> model) {
             model.put("items",getItemCollection());
             return "inventory";
