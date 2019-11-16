@@ -3,7 +3,7 @@ package com.gildedrose.cucumber;
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
-import gildedrose.Application;
+import com.gildedrose.app.Application;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.test.context.SpringBootContextLoader;

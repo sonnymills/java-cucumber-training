@@ -1,6 +1,8 @@
 package com.gildedrose.cucumber.stepdefs;
 
+import com.gildedrose.DataStore;
 import com.gildedrose.GildedRose;
+import com.gildedrose.Item;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -42,14 +44,15 @@ public class InventorySteps {
     }
 
     @Given("I add an item {string}")
-    public void i_add_an_item(String string) {
-        driver.visit("/inventory/add/something/4/5/");
+    public void i_add_an_item(String itemName) {
+        DataStore ds = DataStore.getDataStoreInstance();
+        ds.addObject(itemName, new Item(itemName,4,4));
     }
 
     @Then("I can see the item {string}")
-    public void i_can_see_the_item(String string) {
+    public void i_can_see_the_item(String itemName) {
+        driver.pageShouldContain(itemName);
         // Write code here that turns the phrase above into concrete actions
-        throw new cucumber.api.PendingException();
     }
 
     @Given("There is an item {string} in the catalog with value {double} and sell by {int}")

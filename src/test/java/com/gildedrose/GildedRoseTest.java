@@ -13,8 +13,9 @@ public class GildedRoseTest {
 
     @Test
     public void foo() {
-        ArrayList<Item> items = new ArrayList<>(Arrays.asList( new Item("foo", 0, 0) ));
-        GildedRose app = new GildedRose(items);
+        //ArrayList<Item> items = new ArrayList<>(Arrays.asList( new Item("foo", 0, 0) ));
+        GildedRose app = new GildedRose();
+        app.add_item(new Item("foo",0,0));
         app.updateQuality();
         assertEquals("foo", app.items.get(0).getName());
     }

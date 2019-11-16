@@ -1,11 +1,7 @@
-package gildedrose;
+package com.gildedrose.app;
 
-import com.gildedrose.GildedRose;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-import javax.servlet.http.HttpSession;
 
 
 @SpringBootApplication

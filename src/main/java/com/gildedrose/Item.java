@@ -21,4 +21,12 @@ public class Item {
    public String toString() {
         return this.name + ", " + this.sellIn + ", " + this.quality;
     }
+
+    public void updateQuality(int qualityValue) {
+        this.quality = qualityValue;
+    }
+
+    public void updateSellIn(int sellInValue) {
+        this.sellIn = sellInValue;
+    }
 }

@@ -1,4 +1,4 @@
-package gildedrose;
+package com.gildedrose.app.controller;
 
 import com.gildedrose.GildedRose;
 import com.gildedrose.Item;
@@ -19,7 +19,7 @@ import java.util.Map;
 
 
 @Controller
-public class GildedRoseController {
+public class InventoryController {
 
         @Autowired
         private HttpServletRequest request;
