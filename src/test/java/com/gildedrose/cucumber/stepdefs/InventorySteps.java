@@ -1,17 +1,12 @@
 package com.gildedrose.cucumber.stepdefs;
 
 import com.gildedrose.DataStore;
-import com.gildedrose.GildedRose;
 import com.gildedrose.Item;
+import com.gildedrose.cucumber.driver.WebDriverWrapper;
+import com.gildedrose.cucumber.site.GildedRoseSite;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import com.gildedrose.cucumber.driver.WebDriverWrapper;
-import com.gildedrose.cucumber.site.GildedRoseSite;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-
-import java.util.List;
 
 public class InventorySteps {
     private final GildedRoseSite site = new GildedRoseSite();
@@ -19,8 +14,9 @@ public class InventorySteps {
 
     @Given("There are items in the catalog")
     public void there_are_items_in_the_catalog() {
-        //GildedRose app = new GildedRose(items);
-        // app.updateQuality();
+        DataStore ds = DataStore.getDataStoreInstance();
+        ds.addObject("thing1", new Item("thing1",3,3));
+        ds.addObject("thing2", new Item("thing2",3,3));
     }
 
     @When("I look at the item summary")
@@ -70,5 +66,10 @@ public class InventorySteps {
     public void then_has_appropriately_decreased_to_days_remaining_to_sell_and_$(String string, Integer int1, Double double1) {
         // Write code here that turns the phrase above into concrete actions
         throw new cucumber.api.PendingException();
+    }
+
+    @Then("I can see the welcome message is {string}")
+    public void iCanSeeTheWelcomeMessageIs(String message) {
+        driver.pageShouldContain(message);
     }
 }
