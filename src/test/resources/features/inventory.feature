@@ -10,15 +10,22 @@ Feature: The Gilded Rose has inventory
     When  I look at the item summary
     Then  I see the names of two items
 
+  @now
+  Scenario: The session is persistent enough
+    Given There is an inventory page
+    And I add an item "persistent cheese"
+    When I look at the item summary
+    Then I can see the item "persistent cheese"
+
+
 
   Scenario: All Items have values
       Given There are items in the catalog
       When  I look at the item summary
       Then I see that all the items have a value assigned to them
 
-  @now
   Scenario Outline: When a day passes items degrade
-      Given There is an item <item> in the catalog with value <initial_value> and sell by <initial_sell_by>
+      Given There is an item "<item>" in the catalog with value <initial_value> and sell by <initial_sell_by>
       When it's the day <days_passed>
       Then then "<item>" has appropriately decreased to <sell_by> days remaining to sell and $<value>
     Examples:

@@ -40,12 +40,24 @@ public class InventorySteps {
     public void iSeeThatAllTheItemsHaveAValueAssignedToThem() {
         driver.expectPageToContainExactlyNElements("Value",2);
     }
-    @Given("There is an item brie in the catalog with value {double} and sell by {int}")
-    public void there_is_an_item_brie_in_the_catalog_with_value_and_sell_by(Double double1, Integer int1) {
+
+    @Given("I add an item {string}")
+    public void i_add_an_item(String string) {
+        driver.visit("/inventory/add/something/4/5/");
+    }
+
+    @Then("I can see the item {string}")
+    public void i_can_see_the_item(String string) {
         // Write code here that turns the phrase above into concrete actions
         throw new cucumber.api.PendingException();
     }
 
+    @Given("There is an item {string} in the catalog with value {double} and sell by {int}")
+    public void there_is_an_item_in_the_catalog_with_value_and_sell_by(String string, Double double1, Integer int1) {
+
+        // Write code here that turns the phrase above into concrete actions
+        throw new cucumber.api.PendingException();
+    }
     @When("it's the day {int}")
     public void it_s_the_day(Integer int1) {
         // Write code here that turns the phrase above into concrete actions
