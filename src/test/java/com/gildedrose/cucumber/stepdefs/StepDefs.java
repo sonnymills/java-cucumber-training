@@ -11,11 +11,6 @@ public class StepDefs {
     private final GildedRoseSite site = new GildedRoseSite();
     private final WebDriverWrapper driver = site.getDriver();
 
-    @Given("There is an inventory page")
-    public void there_is_an_inventory_page() {
-        // don't need anything here because no data yet
-    }
-
     @When("I load the page")
     public void i_load_the_page() throws InterruptedException {
         site.visit("/inventory/list");

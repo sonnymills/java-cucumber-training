@@ -20,7 +20,8 @@ Feature: The Gilded Rose has inventory
   Scenario: All Items have values
       Given There are items in the catalog
       When  I look at the item summary
-      Then I see that all the items have a value assigned to them
+      Then I see that all the items have a quality value assigned to them
+      And I see that all elements have the remaining number of days in which they should be sold
 
   Scenario Outline: When a day passes items degrade
       Given There is an item "<item>" in the catalog with value <initial_value> and sell by <initial_sell_by>

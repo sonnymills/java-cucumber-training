@@ -137,7 +137,11 @@ public class WebDriverWrapper {
 
     public void expectPageToContainExactlyNElements(String text, int count) {
         List<WebElement> elements = driver.findElements(By.xpath("//*[contains(text(),'" + text + "')]"));
-        assertEquals(elements.size(), count);
+        assertEquals(count,elements.size());
+    }
+    public void expectPageToContainExactlyNElementsWithName(String name, int count) {
+        List<WebElement> elements = driver.findElements(By.xpath("//*[@name='" + name + "']"));
+        assertEquals(count,elements.size());
     }
 
     public void clickUpload() {
@@ -226,5 +230,6 @@ public class WebDriverWrapper {
             e.printStackTrace();
         }
     }
+
 }
 

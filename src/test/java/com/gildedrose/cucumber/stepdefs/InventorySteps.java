@@ -4,6 +4,7 @@ import com.gildedrose.DataStore;
 import com.gildedrose.Item;
 import com.gildedrose.cucumber.driver.WebDriverWrapper;
 import com.gildedrose.cucumber.site.GildedRoseSite;
+import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -11,7 +12,10 @@ import cucumber.api.java.en.When;
 public class InventorySteps {
     private final GildedRoseSite site = new GildedRoseSite();
     private final WebDriverWrapper driver = site.getDriver();
-
+    @Given("There is an inventory page")
+    public void there_is_an_inventory_page() {
+        // no automation required here
+    }
     @Given("There are items in the catalog")
     public void there_are_items_in_the_catalog() {
         DataStore ds = DataStore.getDataStoreInstance();
@@ -29,9 +33,15 @@ public class InventorySteps {
         driver.pageShouldContain("thing2");
     }
 
-    @Then("I see that all of the items have a sell by date")
-    public void i_see_that_all_of_the_items_have_a_sell_by_date() {
-        driver.expectPageToContainExactlyNElements("Sell By",2);
+    @Then("I see that all the items have a quality value assigned to them")
+    public void i_see_that_all_the_items_have_a_quality_value_assigned_to_them() {
+        // Write code here that turns the phrase above into concrete actions
+        driver.expectPageToContainExactlyNElementsWithName("item_quality",2);
+    }
+    @And("I see that all elements have the remaining number of days in which they should be sold")
+    public void iSeeThatAllElementsHaveTheRemainingNumberOfDaysInWhichTheyShouldBeSold() {
+        driver.expectPageToContainExactlyNElementsWithName("item_sell_by",2);
+
     }
 
 
@@ -68,4 +78,5 @@ public class InventorySteps {
     public void iCanSeeTheWelcomeMessageIs(String message) {
         driver.pageShouldContain(message);
     }
+
 }

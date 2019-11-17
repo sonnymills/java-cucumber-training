@@ -20,8 +20,9 @@
         <td>
 <!--            <a th:href="@{/owners/__${owner.id}__}" th:text="${owner.firstName + ' ' + owner.lastName}"/></a>-->
         </td>
-        <td th:text="${item.name}"/>
-        <td th:text="Value"/>
+        <td name="item_name" th:text="${item.name}"/>
+        <td name="item_quality" th:text="${item.quality}"/>
+        <td name="item_sell_by" th:text="${item.sellIn}"/>
     </tr>
     </tbody>
 </table>
