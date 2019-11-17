@@ -18,12 +18,16 @@ public final class DataStore {
 
     private static DataStore getDataStore(Boolean resetData) {
         if (dataObjects == null || resetData) {
-            dataObjects = new HashMap<>();
+            resetDataStore();
         }
         if (dataStoreInstance == null){
             dataStoreInstance = new DataStore();
         }
         return dataStoreInstance;
+    }
+
+    public static void resetDataStore() {
+        dataObjects = new HashMap<>();
     }
 
     public ArrayList<String> getKeys() {

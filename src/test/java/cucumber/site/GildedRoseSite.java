@@ -1,7 +1,7 @@
-package com.gildedrose.cucumber.site;
+package cucumber.site;
 
-import com.gildedrose.cucumber.driver.WebDriverFactory;
-import com.gildedrose.cucumber.driver.WebDriverWrapper;
+import cucumber.driver.WebDriverFactory;
+import cucumber.driver.WebDriverWrapper;
 
 public class GildedRoseSite {
     public final WebDriverWrapper driver = WebDriverFactory.getDefaultDriver();

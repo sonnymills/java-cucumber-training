@@ -1,4 +1,4 @@
-package com.gildedrose.cucumber.driver;
+package cucumber.driver;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;

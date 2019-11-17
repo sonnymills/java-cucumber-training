@@ -1,4 +1,4 @@
-package com.gildedrose.cucumber.driver;
+package cucumber.driver;
 
 import java.util.ArrayList;
 

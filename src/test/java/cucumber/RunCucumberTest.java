@@ -1,10 +1,8 @@
-package com.gildedrose.cucumber;
+package cucumber;
 
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 import org.junit.runner.RunWith;
-
-import java.util.logging.Level;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(   plugin = {"pretty"},

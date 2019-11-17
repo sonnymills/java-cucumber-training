@@ -1,10 +1,9 @@
-package com.gildedrose.cucumber.stepdefs;
+package cucumber.stepdefs;
 
-import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import com.gildedrose.cucumber.driver.WebDriverWrapper;
-import com.gildedrose.cucumber.site.GildedRoseSite;
+import cucumber.driver.WebDriverWrapper;
+import cucumber.site.GildedRoseSite;
 
 
 public class StepDefs {

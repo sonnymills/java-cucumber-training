@@ -1,4 +1,4 @@
-package com.gildedrose.cucumber.driver;
+package cucumber.driver;
 
 public interface UiElement {
     void sendKeys(String keys);

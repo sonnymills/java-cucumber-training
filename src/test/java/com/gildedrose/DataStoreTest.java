@@ -9,7 +9,6 @@ import java.util.Iterator;
 import java.util.List;
 
 import static junit.framework.TestCase.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class DataStoreTest {
 
@@ -25,6 +24,7 @@ public class DataStoreTest {
     public void repository_starts_without_objects(){
         assertEquals(0, ds.getKeys().size());
     }
+
     @Test
     public void datastore_can_store_a_simple_string(){
         ds.addObject("thisString","wow");
