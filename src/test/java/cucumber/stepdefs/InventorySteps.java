@@ -37,14 +37,14 @@ public class InventorySteps {
     }
     @Given("The following items exist in the catalog")
     public void the_following_items_exist_in_the_catalog(List<Map<String,String>> items) {
-        DataStore ds = DataStore.getDataStoreInstance();
+        DataStore gildedRoseDataStore = DataStore.getDataStoreInstance();
         verify_item_count = items.size();
         for (Map<String, String> itemAttributes : items) {
             String sellIn = itemAttributes.get("remaining_days");
             String quality = itemAttributes.get("quality");
             String name = itemAttributes.get("name");
             Item item = new Item(name, parseInt(sellIn), parseInt(quality));
-            ds.addObject(item.name,item);
+            gildedRoseDataStore.addObject(item.name,item);
         }
     }
 
@@ -79,7 +79,6 @@ public class InventorySteps {
     @Then("I can see the item {string}")
     public void i_can_see_the_item(String itemName) {
         driver.pageShouldContain(itemName);
-        // Write code here that turns the phrase above into concrete actions
     }
 
     @When("it's the day {int}")
