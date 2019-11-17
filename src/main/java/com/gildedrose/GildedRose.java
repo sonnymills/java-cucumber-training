@@ -1,9 +1,6 @@
 package com.gildedrose;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 
 public class GildedRose {
     public ArrayList<Item> items = new ArrayList<>();
@@ -13,8 +10,8 @@ public class GildedRose {
     }
     public GildedRose(){}
 
-    Iterator<Item> itemIterator = items.listIterator();
     public void updateQuality() {
+        ListIterator<Item> itemIterator = items.listIterator();
         while (itemIterator.hasNext()) {
             Item item = itemIterator.next();
             if (!item.name.equals("Aged Brie")

@@ -12,7 +12,7 @@ import java.util.List;
 public class GildedRoseTest {
 
     @Test
-    public void foo() {
+    public void gildrose_update_does_not_cause_concurrency_error() {
         //ArrayList<Item> items = new ArrayList<>(Arrays.asList( new Item("foo", 0, 0) ));
         GildedRose app = new GildedRose();
         app.add_item(new Item("foo",0,0));

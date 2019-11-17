@@ -78,7 +78,7 @@ public class DataStoreTest {
         assertEquals(2,item.sellIn);
     }
     @Test
-    public void try_to_reproduce_failure_to_get_after_iteration(){
+    public void data_store_can_reset_the_internal_dataStore_and_start_with_no_items(){
         ds.addObject("thing1", new Item("thing1",3,3));
         ds.addObject("thing2", new Item("thing2",3,3));
         ds.addObject("thing3", new Item("thing3",3,3));

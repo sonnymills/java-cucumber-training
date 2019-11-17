@@ -34,10 +34,6 @@ public class InventorySteps {
         driver.expectPageToContainExactlyNElements("Sell By",2);
     }
 
-    @Then("I see that all the items have a value assigned to them")
-    public void iSeeThatAllTheItemsHaveAValueAssignedToThem() {
-        driver.expectPageToContainExactlyNElements("Value",2);
-    }
 
     @Given("I add an item {string}")
     public void i_add_an_item(String itemName) {
