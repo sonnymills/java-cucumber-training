@@ -1,8 +1,6 @@
 package com.gildedrose;
 
-import cucumber.api.java.bs.A;
-import org.junit.Assert;
-import org.junit.Before;
+git import org.junit.Before;
 import org.junit.Test;
 
 import java.time.LocalDate;
