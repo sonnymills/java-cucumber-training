@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html xmlns:th="https://www.thymeleaf.org" >
-<!--<html xmlns:th="https://www.thymeleaf.org" th:replace="~{fragments/layout :: layout (~{::body},'owners')}">-->
 
 <head>
     <meta charset="UTF-8">
@@ -8,17 +7,17 @@
 </head>
 <body>
 <h1>Welcome to Kahjeet's inventory! Do you have coin?</h1>
-<table id="owners" class="table table-striped">
-<!--    <thead>
-    <tr>
-        <th style="width: 150px;">Name</th>
-        <th style="width: 200px;">Address</th>
-    </tr>
-    </thead> -->
+<table id="inventory" style="border-style:solid;border-width:2px;border-color:grey;">
+   <thead>
+        <tr>
+            <th style="width: 250px;">Item Name</th>
+            <th style="width: 200px;">Quality</th>
+            <th style="width: 200px;">Remaining Days to sell</th>
+        </tr>
+    </thead>
     <tbody>
     <tr th:each="item : ${items}">
         <td>
-<!--            <a th:href="@{/owners/__${owner.id}__}" th:text="${owner.firstName + ' ' + owner.lastName}"/></a>-->
         </td>
         <td name="item_name" th:text="${item.name}"/>
         <td name="item_quality" th:text="${item.quality}"/>

@@ -8,11 +8,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
-import java.util.*;
+import java.util.List;
+import java.util.Map;
 
 
 @Controller
@@ -24,11 +24,6 @@ public class InventoryController {
     @ModelAttribute("items")
     public Item getModelItems() {
         return new Item("thing1", 3, 4);
-    }
-
-    @RequestMapping("/")
-    public String index() {
-        return "<body>Welcome to The Gilded Rose!<br>I am Khajiit. Do you have coin?</body>";
     }
 
     @GetMapping(value = "/inventory/list")

@@ -42,6 +42,7 @@ public class WebDriverWrapper {
             chromeOptions.addArguments("--no-sandbox");
             chromeOptions.addArguments("--silent");
             chromeOptions.addArguments("--start-maximized");
+
             driver = new ChromeDriver(chromeOptions);
         } else {
             DesiredCapabilities dcap = new DesiredCapabilities();

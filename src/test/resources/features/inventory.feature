@@ -27,7 +27,7 @@ Feature: The Gilded Rose has inventory
     Then I see that all the items have a quality value assigned to them
     And I see that all elements have the remaining number of days in which they should be sold
 
-  @now
+  @developing
   Scenario Outline: When a day passes items degrade
       Given There is an item "<item>" in the catalog with quality <initial_quality> and sell by <initial_sell_by>
       When it's the day <days_passed>
