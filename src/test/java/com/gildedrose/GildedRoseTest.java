@@ -2,12 +2,12 @@ package com.gildedrose;
 
 import static org.junit.Assert.*;
 
-import cucumber.api.java.bs.A;
 import org.junit.Test;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.util.Calendar;
+import java.util.Date;
 
 public class GildedRoseTest {
 
@@ -26,6 +26,22 @@ public class GildedRoseTest {
         app.add_item(item);
         assertEquals(1,app.items.size());
         assertEquals("something_fun", app.items.get(0).name);
+    }
+    @Test
+    public void the_application_understands_time(){
+        GildedRose app = new GildedRose();
+        String today = LocalDate.now().toString();
+        assertEquals(today, app.getTodaysDate());
+    }
+    @Test
+    public void the_application_can_be_set_to_a_future_date(){
+        GildedRose app = new GildedRose();
+        LocalDate today = LocalDate.now();
+        assertEquals(today.toString(), app.getTodaysDate());
+        Long oneDay = Long.valueOf(1);
+        LocalDate tomorrow = today.plusDays(oneDay);
+        app.setCurrentDate(tomorrow);
+        assertEquals(tomorrow.toString(),app.getTodaysDate());
     }
 
 }

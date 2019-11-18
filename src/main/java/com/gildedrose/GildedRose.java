@@ -1,9 +1,12 @@
 package com.gildedrose;
 
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 import java.util.*;
 
 public class GildedRose {
     public ArrayList<Item> items = new ArrayList<>();
+    private LocalDate today = LocalDate.now();
 
     public GildedRose(ArrayList<Item> items) {
         this.items = items;
@@ -71,5 +74,14 @@ public class GildedRose {
 
     public void add_item(Item item) {
         items.add(item);
+    }
+
+    public String getTodaysDate() {
+        return today.toString();
+    }
+
+    public void setCurrentDate(LocalDate localDate) {
+        today = localDate;
+
     }
 }
