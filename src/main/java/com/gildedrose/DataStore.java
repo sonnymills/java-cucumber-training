@@ -1,5 +1,6 @@
 package com.gildedrose;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -7,6 +8,8 @@ import java.util.List;
 public final class DataStore {
     private static DataStore dataStoreInstance;
     private static HashMap<String, Object> dataObjects;
+    private static LocalDate today = LocalDate.now();
+
     private DataStore(){
     }
    public static DataStore getDataStoreInstance(Boolean resetData){
@@ -28,6 +31,8 @@ public final class DataStore {
 
     public static void resetDataStore() {
         dataObjects = new HashMap<>();
+        today = LocalDate.now();
+
     }
 
     public ArrayList<String> getKeys() {
@@ -47,5 +52,13 @@ public final class DataStore {
     public List<Object> getObjectList() {
         List<Object> objectList = new ArrayList<Object>(dataObjects.values());
         return objectList;
+    }
+
+    public void setCurrentDate(LocalDate date) {
+        today = date;
+    }
+
+    public String getToday() {
+        return today.toString();
     }
 }

@@ -33,15 +33,6 @@ public class GildedRoseTest {
         String today = LocalDate.now().toString();
         assertEquals(today, app.getTodaysDate());
     }
-    @Test
-    public void the_application_can_be_set_to_a_future_date(){
-        GildedRose app = new GildedRose();
-        LocalDate today = LocalDate.now();
-        assertEquals(today.toString(), app.getTodaysDate());
-        Long oneDay = Long.valueOf(1);
-        LocalDate tomorrow = today.plusDays(oneDay);
-        app.setCurrentDate(tomorrow);
-        assertEquals(tomorrow.toString(),app.getTodaysDate());
-    }
+
 
 }

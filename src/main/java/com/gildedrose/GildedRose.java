@@ -6,7 +6,6 @@ import java.util.*;
 
 public class GildedRose {
     public ArrayList<Item> items = new ArrayList<>();
-    private LocalDate today = LocalDate.now();
 
     public GildedRose(ArrayList<Item> items) {
         this.items = items;
@@ -77,11 +76,8 @@ public class GildedRose {
     }
 
     public String getTodaysDate() {
-        return today.toString();
+        DataStore ds = DataStore.getDataStoreInstance();
+        return ds.getToday().toString();
     }
 
-    public void setCurrentDate(LocalDate localDate) {
-        today = localDate;
-
-    }
 }

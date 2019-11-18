@@ -1,8 +1,11 @@
 package com.gildedrose;
 
+import cucumber.api.java.bs.A;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
@@ -102,6 +105,27 @@ public class DataStoreTest {
         DataStore dsRead = DataStore.getDataStoreInstance(false);
         Item thing5 = (Item) dsRead.getObject("thing5");
         assertEquals(2, thing5.sellIn);
+    }
+    @Test
+    public void the_application_can_be_set_to_a_future_date(){
+        LocalDate today = LocalDate.now();
+        assertEquals(today.toString(), ds.getToday());
+        Long oneDay = Long.valueOf(1);
+        LocalDate tomorrow = today.plusDays(oneDay);
+        ds.setCurrentDate(tomorrow);
+        assertEquals(tomorrow.toString(),ds.getToday());
+    }
+
+    @Test
+    public void clearing_the_datastore_resets_date(){
+        LocalDate today = LocalDate.now();
+        assertEquals(today.toString(), ds.getToday());
+        Long oneDay = Long.valueOf(1);
+        LocalDate tomorrow = today.plusDays(oneDay);
+        ds.setCurrentDate(tomorrow);
+        DataStore.resetDataStore();
+        assertEquals(today.toString(),ds.getToday());
+
     }
     private class ComplexThing{
         private String name;
