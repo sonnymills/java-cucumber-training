@@ -8,6 +8,10 @@ public class GildedRose {
     public GildedRose(ArrayList<Item> items) {
         this.items = items;
     }
+
+    // this constructor is here so that tests can inject
+    // items for testing after instantiation
+
     public GildedRose(){}
 
     public void updateQuality() {
