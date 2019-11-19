@@ -26,7 +26,7 @@ public class WelcomeSteps {
         // no need to implement since there is no login
     }
 
-    @When("when access the welcome page")
+    @When("when they access the welcome page")
     public void when_access_the_welcome_page() {
         site.visit("/");
     }

@@ -37,7 +37,7 @@ public class InventoryControllerTest {
    }
 
    @Test
-   public void shouldReturnInventoryWelcomeMessage() throws Exception {
+   public void shouldReturnStatus200forInventoryList() throws Exception {
       this.mockMvc.perform(get("/inventory/list")).andDo(print()).andExpect(status().isOk());
    }
 
