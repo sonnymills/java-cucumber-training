@@ -35,7 +35,7 @@ public class WebDriverWrapper {
     }
 
     public WebDriverWrapper() {
-        if (System.getProperty("webdriver").equals("chrome")) {
+        if ("chrome".equals(System.getProperty("webdriver"))) {
             ChromeOptions chromeOptions = new ChromeOptions();
             chromeOptions.addArguments("--headless");
             chromeOptions.addArguments("--disable-gpu");
